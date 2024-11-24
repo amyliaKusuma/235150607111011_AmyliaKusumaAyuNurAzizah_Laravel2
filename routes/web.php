@@ -17,11 +17,11 @@ Route::post('/logout', [UsersController::class, 'logout'])->name('logout');
 // Rute yang dilindungi (perlu login)
 Route::middleware(['auth'])->group(function () {
     Route::get('/blogs', [BlogController::class, 'showBlogs'])->name('blogs.list');
-    Route::get('/tambah', [BlogController::class, 'create'])->name('blog.create');
-    Route::post('/tambah', [BlogController::class, 'store'])->name('blog.store');
-    Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
-    Route::put('/update/{id}', [BlogController::class, 'update'])->name('blog.update');
-    Route::delete('/delete/{id}', [BlogController::class, 'destroy'])->name('blog.destroy');
+    Route::get('/tambah', [BlogController::class, 'create'])->name('blogs.create');
+    Route::post('/tambah', [BlogController::class, 'store'])->name('blogs.store');
+    Route::get('/edit/{id}', [BlogController::class, 'edit'])->name('blogs.edit');
+    Route::put('/update/{id}', [BlogController::class, 'update'])->name('blogs.update');
+    Route::delete('/delete/{id}', [BlogController::class, 'destroy'])->name('blogs.destroy');
 });
 
 // Route::get('/', function () {

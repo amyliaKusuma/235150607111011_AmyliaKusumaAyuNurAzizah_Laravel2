@@ -11,7 +11,7 @@ class UsersController extends Controller
     /* REGISTRASI */
     public function create()
     {
-        return view('Registrasi');
+        return view('registrasi');
     }
 
     public function store(Request $request)
@@ -34,7 +34,7 @@ class UsersController extends Controller
     /* LOGIN */
     public function viewLogin()
     {
-        return view('Login');
+        return view('login');
     }
 
     public function login(Request $request)

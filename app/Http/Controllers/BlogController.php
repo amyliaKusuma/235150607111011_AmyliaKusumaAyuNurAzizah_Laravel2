@@ -27,7 +27,7 @@ class BlogController extends Controller
     {
         $validatedData = $request->validate([
             'judul' => 'required|string|max:255',
-            'isi' => 'required|string|max:255',
+            'isi' => 'required|string|max:2000',
             'pembuat' => 'required|string|max:255',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
@@ -52,7 +52,7 @@ class BlogController extends Controller
     {
     $validatedData = $request->validate([
         'judul' => 'required|string|max:255',
-        'isi' => 'required|string|max:255',
+        'isi' => 'required|string|max:20000',
         'pembuat' => 'required|string|max:255',
         'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
     ]);
